@@ -24,16 +24,19 @@ class _HomePageState extends State<HomePage> {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  Icon(Icons.menu),
-                  Text(
-                    "IMDB Movies",
-                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.w900),
-                  ),
-                  Icon(Icons.favorite)
-                ],
+              Padding(
+                padding: const EdgeInsets.only(bottom: 8),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    Icon(Icons.menu),
+                    Text(
+                      "IMDB Movies",
+                      style: TextStyle(fontSize: 25, fontWeight: FontWeight.w900),
+                    ),
+                    Icon(Icons.favorite)
+                  ],
+                ),
               ),
               FutureBuilder(
                 future: service.getMovies(page: page), 
@@ -73,11 +76,14 @@ class _HomePageState extends State<HomePage> {
                               ),
                             ),
                           ),
-                          Text(
-                            movies[index].title.toString(),
-                            style: const TextStyle(
-                              overflow: TextOverflow.ellipsis,
-                              fontWeight: FontWeight.w700,
+                          Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 8.0),
+                            child: Text(
+                              movies[index].title.toString(),
+                              style: const TextStyle(
+                                overflow: TextOverflow.ellipsis,
+                                fontWeight: FontWeight.w700,
+                              ),
                             ),
                           )
                         ],
@@ -87,12 +93,15 @@ class _HomePageState extends State<HomePage> {
                 }
                 return const Center(child: CircularProgressIndicator());
               },),
-              ElevatedButton(onPressed: () {
-                setState(() {
-                  page++;
-                  // page = page + 1;
-                });
-              }, child: const Text("Load More"))
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ElevatedButton(onPressed: () {
+                  setState(() {
+                    page++;
+                    // page = page + 1;
+                  });
+                }, child: const Text("Load More")),
+              )
             ],
           ),
         )

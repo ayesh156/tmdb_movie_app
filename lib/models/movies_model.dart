@@ -4,8 +4,10 @@ class Movie{
   int? id;
   String? title;
   String? backdropPath;
+  double? voteAverage;
+  String? releaseDate;
 
-  Movie({this.backdropPath,this.id,this.overview,this.posterPath,this.title});
+  Movie({this.backdropPath,this.id,this.overview,this.posterPath,this.title,this.voteAverage,this.releaseDate});
 
   factory Movie.fromJson(Map<String, dynamic> map) {
     return Movie(
@@ -13,7 +15,9 @@ class Movie{
       id: map['id'],
       overview: map['overview'],
       posterPath: map['poster_path'],
-      title: map['title']
+      title: map['title'],
+voteAverage: map['vote_average'],
+releaseDate: map['release_date']
     );
   }
 
