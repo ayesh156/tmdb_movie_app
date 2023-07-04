@@ -123,12 +123,14 @@ class _MovieDetailsState extends State<MovieDetails> {
                                 )),
                                 Column(
                                   children: [
-                                    Row(
-                                      mainAxisAlignment: MainAxisAlignment.end,
+                                    Wrap(
                                       children: [
-                                        const Text("Release Date : ",
-                                            style: TextStyle(
-                                                fontWeight: FontWeight.w600)),
+                                        const Padding(
+                                          padding: EdgeInsets.only(top: 8.0),
+                                          child: Text("Release Date : ",
+                                              style: TextStyle(
+                                                  fontWeight: FontWeight.w600)),
+                                        ),
                                         Card(
                                             elevation: 5,
                                             color: Colors.blue,
@@ -152,12 +154,14 @@ class _MovieDetailsState extends State<MovieDetails> {
                                     const SizedBox(
                                       height: 10,
                                     ),
-                                    Row(
-                                      mainAxisAlignment: MainAxisAlignment.end,
+                                    Wrap(
                                       children: [
-                                        const Text("Vote Average : ",
-                                            style: TextStyle(
-                                                fontWeight: FontWeight.w600)),
+                                        const Padding(
+                                          padding: EdgeInsets.only(top: 8.0),
+                                          child: Text("Vote Average : ",
+                                              style: TextStyle(
+                                                  fontWeight: FontWeight.w600)),
+                                        ),
                                         Card(
                                             elevation: 5,
                                             color: Colors.green,
