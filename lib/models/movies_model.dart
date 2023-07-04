@@ -4,7 +4,7 @@ class Movie{
   int? id;
   String? title;
   String? backdropPath;
-  double? voteAverage;
+  String? voteAverage;
   String? releaseDate;
 
   Movie({this.backdropPath,this.id,this.overview,this.posterPath,this.title,this.voteAverage,this.releaseDate});
@@ -16,7 +16,7 @@ class Movie{
       overview: map['overview'],
       posterPath: map['poster_path'],
       title: map['title'],
-voteAverage: map['vote_average'],
+voteAverage: map['vote_average'].toString(),
 releaseDate: map['release_date']
     );
   }
