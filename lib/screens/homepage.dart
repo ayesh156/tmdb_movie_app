@@ -25,11 +25,11 @@ class _HomePageState extends State<HomePage> {
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: Column(
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 8),
+                const Padding(
+                  padding: EdgeInsets.only(bottom: 8),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
+                    children: [
                       Icon(Icons.menu),
                       Text(
                         "IMDB Movies",
